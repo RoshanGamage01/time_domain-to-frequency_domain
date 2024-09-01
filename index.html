@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-2">
+    <!-- <div
+        class="px-2 py-1 bg-gray-200 rounded-lg w-fit h-fit cursor-pointer mb-2"
+    >
+        Add frequancy
+    </div> -->
+    <div
+        class="flex gap-5"
+    >
+        <canvas id="signalCanvas" width="800" height="400" style="border: 1px solid black"></canvas>
+        <div class="flex flex-col gap-2">
+            <div class="mb-5">
+                <div>Signal 1 <span id="first-freq"></span></div>
+
+                <label class="block" for="frequency1">Frequency</label>
+                <input type="range" id="frequency1" value="1">
+
+                <label class="block" for="phase1">Phase</label>
+                <input type="range" id="phase1" value="1">
+
+                <label class="block" for="amp1" 
+                    step="0.1"
+                >Amp</label>
+                <input type="range" id="amp1" value="1">
+
+                <button
+                    class="px-2 py-1 bg-gray-200 rounded-lg w-fit h-fit cursor-pointer"
+                    id="playSignal1"
+                >Play signal 1</button>
+            </div>
+
+            <div>
+                <div>Signal 2 <span id="second-freq"></span></div>
+
+                <label class="block" for="frequency2">Frequency</label>
+                <input type="range" id="frequency2" value="0">
+
+                <label class="block" for="phase2">Phase</label>
+                <input type="range" id="phase2" value="1">
+
+                <label class="block" for="amp2">Amp</label>
+                <input type="range" id="amp2" value="0">
+
+                <button
+                    class="px-2 py-1 bg-gray-200 rounded-lg w-fit h-fit cursor-pointer"
+                    id="playSignal2"
+                >Play combined</button>
+            </div>
+        </div>
+    </div>
+    <div
+        class="flex gap-5"
+    >
+        <canvas id="complexPlaneCanvas" width="500" height="500"></canvas><br/>
+        <div>
+            <div>Complex plane</div>
+            <span id="winding-freq"></span>
+
+            <label class="block" for="frq">frequancy</label>
+            <input type="range" id="frq" value="1">
+
+            <label class="block" for="time">time</label>
+            <input type="range" id="time" value="1">
+        </div>
+
+        <canvas id="frequencyDomainCanvas" width="800" height="400"></canvas>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
